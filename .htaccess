@@ -1,3 +1,7 @@
 RewriteEngine On
 
+
 RewriteRule ^manifest\.mpd$ get-mpd.php [QSA,L]
+
+# Route /tataplay/1183/segment-file.dash => segment.php?id=1183&seg=segment-file.dash
+RewriteRule ^([0-9]+)/([^/]+)$ segment.php?id=$1&seg=$2 [QSA,L]

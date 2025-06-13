@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Broadpeak BkS350 Origin Packager  (version=1.12.8-28913) -->
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:mpeg:dash:schema:mpd:2011" xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 http://standards.iso.org/ittf/PubliclyAvailableStandards/MPEG-DASH_schema_files/DASH-MPD.xsd" type="dynamic" availabilityStartTime="1970-01-01T00:00:00Z" publishTime="2025-06-13T17:14:10.623145Z" minimumUpdatePeriod="PT8S" timeShiftBufferDepth="PT4H10M" maxSegmentDuration="PT8S" minBufferTime="PT30S" profiles="urn:mpeg:dash:profile:isoff-live:2011">
+  <Period id="1" start="PT0S">
+    <BaseURL>http://192.168.1.68/tataplay/63/</BaseURL>
+    <AdaptationSet id="1" group="1" contentType="audio" segmentAlignment="true" audioSamplingRate="48000" mimeType="audio/mp4" codecs="mp4a.40.2" startWithSAP="1">
+      <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
+      <Role schemeIdUri="urn:mpeg:dash:role:2011" value="main"/>
+      <Representation id="audio_94482_und=94000" bandwidth="94000">
+        <SegmentTemplate timescale="48000" initialization="ZeeTV_HD-$RepresentationID$.dash?hdntl=exp=1749849157~acl=/bpk-tv/irdeto_com_Channel_258/output/*~id=7988236035~data=hdntl~hmac=142345bb7cfe4e0a035a0d53a4c1ff39ff4a73b56c01455945d30b2e3d6ae49b" media="ZeeTV_HD-$RepresentationID$-$Number$.m4s?hdntl=exp=1749849157~acl=/bpk-tv/irdeto_com_Channel_258/output/*~id=7988236035~data=hdntl~hmac=142345bb7cfe4e0a035a0d53a4c1ff39ff4a73b56c01455945d30b2e3d6ae49b" startNumber="218727481">
+          <SegmentTimeline>
+            <S t="83991352320000" d="384000" r="1874"/>
+          </SegmentTimeline>
+        </SegmentTemplate>
+      </Representation>
+      <ContentProtection value="cenc" schemeIdUri="urn:mpeg:dash:mp4protection:2011" cenc:default_KID="5403f573-7de2-5cd5-9416-744226b92354"/>
+      <ContentProtection schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95"><cenc:pssh>AAADQnBzc2gAAAAAmgTweZhAQoarkuZb4IhflQAAAyIiAwAAAQABABgDPABXAFIATQBIAEUAQQBEAEUAUgAgAHgAbQBsAG4AcwA9ACIAaAB0AHQAcAA6AC8ALwBzAGMAaABlAG0AYQBzAC4AbQBpAGMAcgBvAHMAbwBmAHQALgBjAG8AbQAvAEQAUgBNAC8AMgAwADAANwAvADAAMwAvAFAAbABhAHkAUgBlAGEAZAB5AEgAZQBhAGQAZQByACIAIAB2AGUAcgBzAGkAbwBuAD0AIgA0AC4AMAAuADAALgAwACIAPgA8AEQAQQBUAEEAPgA8AFAAUgBPAFQARQBDAFQASQBOAEYATwA+ADwASwBFAFkATABFAE4APgAxADYAPAAvAEsARQBZAEwARQBOAD4APABBAEwARwBJAEQAPgBBAEUAUwBDAFQAUgA8AC8AQQBMAEcASQBEAD4APAAvAFAAUgBPAFQARQBDAFQASQBOAEYATwA+ADwASwBJAEQAPgBjAC8AVQBEAFYATwBKADkAMQBWAHkAVQBGAG4AUgBDAEoAcgBrAGoAVgBBAD0APQA8AC8ASwBJAEQAPgA8AEMASABFAEMASwBTAFUATQA+AHoAWQByADEAdwA1AGMAcQBjADYAZwA9ADwALwBDAEgARQBDAEsAUwBVAE0APgA8AEwAQQBfAFUAUgBMAD4AaAB0AHQAcABzADoALwAvAHQAYQB0AGEAcABsAGEAeQAuAGwAaQB2AGUALgBvAHQAdAAuAGkAcgBkAGUAdABvAC4AYwBvAG0ALwBwAGwAYQB5AHIAZQBhAGQAeQAvAHIAaQBnAGgAdABzAG0AYQBuAGEAZwBlAHIALgBhAHMAbQB4AD8AQwByAG0ASQBkAD0AdABhAHQAYQBzAGsAeQAmAGEAbQBwADsAQQBjAGMAbwB1AG4AdABJAGQAPQB0AGEAdABhAHMAawB5ACYAYQBtAHAAOwBjAG8AbgB0AGUAbgB0AEkAZAA9ADQAMAAwADAAMAAwADAANgA1ADwALwBMAEEAXwBVAFIATAA+ADwALwBEAEEAVABBAD4APAAvAFcAUgBNAEgARQBBAEQARQBSAD4A</cenc:pssh></ContentProtection>
+      <ContentProtection schemeIdUri="urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed"><cenc:pssh>AAAAMnBzc2gAAAAA7e+LqXnWSs6jyCfc1R0h7QAAABISEFQD9XN94lzVlBZ0Qia5I1Q=</cenc:pssh></ContentProtection>
+    </AdaptationSet>
+    <AdaptationSet id="2" group="2" contentType="video" par="16:9" minBandwidth="226400" maxBandwidth="3187600" maxWidth="1920" maxHeight="1080" segmentAlignment="true" sar="1:1" frameRate="25" mimeType="video/mp4" startWithSAP="1">
+      <Role schemeIdUri="urn:mpeg:dash:role:2011" value="main"/>
+      <Representation id="video=226400" bandwidth="226400" width="320" height="180" codecs="avc1.4D401E" scanType="progressive">
+        <SegmentTemplate timescale="600" initialization="ZeeTV_HD-$RepresentationID$.dash?hdntl=exp=1749849157~acl=/bpk-tv/irdeto_com_Channel_258/output/*~id=7988236035~data=hdntl~hmac=142345bb7cfe4e0a035a0d53a4c1ff39ff4a73b56c01455945d30b2e3d6ae49b" media="ZeeTV_HD-$RepresentationID$-$Number$.m4s?hdntl=exp=1749849157~acl=/bpk-tv/irdeto_com_Channel_258/output/*~id=7988236035~data=hdntl~hmac=142345bb7cfe4e0a035a0d53a4c1ff39ff4a73b56c01455945d30b2e3d6ae49b" startNumber="218727481">
+          <SegmentTimeline>
+            <S t="1049891904000" d="4800" r="1874"/>
+          </SegmentTimeline>
+        </SegmentTemplate>
+      </Representation>
+      <Representation id="video=457600" bandwidth="457600" width="480" height="270" codecs="avc1.4D401E" scanType="progressive">
+        <SegmentTemplate timescale="600" initialization="ZeeTV_HD-$RepresentationID$.dash?hdntl=exp=1749849157~acl=/bpk-tv/irdeto_com_Channel_258/output/*~id=7988236035~data=hdntl~hmac=142345bb7cfe4e0a035a0d53a4c1ff39ff4a73b56c01455945d30b2e3d6ae49b" media="ZeeTV_HD-$RepresentationID$-$Number$.m4s?hdntl=exp=1749849157~acl=/bpk-tv/irdeto_com_Channel_258/output/*~id=7988236035~data=hdntl~hmac=142345bb7cfe4e0a035a0d53a4c1ff39ff4a73b56c01455945d30b2e3d6ae49b" startNumber="218727481">
+          <SegmentTimeline>
+            <S t="1049891904000" d="4800" r="1874"/>
+          </SegmentTimeline>
+        </SegmentTemplate>
+      </Representation>
+      <Representation id="video=877600" bandwidth="877600" width="640" height="360" codecs="avc1.4D401E" scanType="progressive">
+        <SegmentTemplate timescale="600" initialization="ZeeTV_HD-$RepresentationID$.dash?hdntl=exp=1749849157~acl=/bpk-tv/irdeto_com_Channel_258/output/*~id=7988236035~data=hdntl~hmac=142345bb7cfe4e0a035a0d53a4c1ff39ff4a73b56c01455945d30b2e3d6ae49b" media="ZeeTV_HD-$RepresentationID$-$Number$.m4s?hdntl=exp=1749849157~acl=/bpk-tv/irdeto_com_Channel_258/output/*~id=7988236035~data=hdntl~hmac=142345bb7cfe4e0a035a0d53a4c1ff39ff4a73b56c01455945d30b2e3d6ae49b" startNumber="218727481">
+          <SegmentTimeline>
+            <S t="1049891904000" d="4800" r="1874"/>
+          </SegmentTimeline>
+        </SegmentTemplate>
+      </Representation>
+      <Representation id="video=1297600" bandwidth="1297600" width="854" height="480" codecs="avc1.4D401E" scanType="progressive">
+        <SegmentTemplate timescale="600" initialization="ZeeTV_HD-$RepresentationID$.dash?hdntl=exp=1749849157~acl=/bpk-tv/irdeto_com_Channel_258/output/*~id=7988236035~data=hdntl~hmac=142345bb7cfe4e0a035a0d53a4c1ff39ff4a73b56c01455945d30b2e3d6ae49b" media="ZeeTV_HD-$RepresentationID$-$Number$.m4s?hdntl=exp=1749849157~acl=/bpk-tv/irdeto_com_Channel_258/output/*~id=7988236035~data=hdntl~hmac=142345bb7cfe4e0a035a0d53a4c1ff39ff4a73b56c01455945d30b2e3d6ae49b" startNumber="218727481">
+          <SegmentTimeline>
+            <S t="1049891904000" d="4800" r="1874"/>
+          </SegmentTimeline>
+        </SegmentTemplate>
+      </Representation>
+      <Representation id="video=1927600" bandwidth="1927600" width="960" height="540" codecs="avc1.4D401F" scanType="progressive">
+        <SegmentTemplate timescale="600" initialization="ZeeTV_HD-$RepresentationID$.dash?hdntl=exp=1749849157~acl=/bpk-tv/irdeto_com_Channel_258/output/*~id=7988236035~data=hdntl~hmac=142345bb7cfe4e0a035a0d53a4c1ff39ff4a73b56c01455945d30b2e3d6ae49b" media="ZeeTV_HD-$RepresentationID$-$Number$.m4s?hdntl=exp=1749849157~acl=/bpk-tv/irdeto_com_Channel_258/output/*~id=7988236035~data=hdntl~hmac=142345bb7cfe4e0a035a0d53a4c1ff39ff4a73b56c01455945d30b2e3d6ae49b" startNumber="218727481">
+          <SegmentTimeline>
+            <S t="1049891904000" d="4800" r="1874"/>
+          </SegmentTimeline>
+        </SegmentTemplate>
+      </Representation>
+      <Representation id="video=2452400" bandwidth="2452400" width="1280" height="720" codecs="avc1.4D401F" scanType="progressive">
+        <SegmentTemplate timescale="600" initialization="ZeeTV_HD-$RepresentationID$.dash?hdntl=exp=1749849157~acl=/bpk-tv/irdeto_com_Channel_258/output/*~id=7988236035~data=hdntl~hmac=142345bb7cfe4e0a035a0d53a4c1ff39ff4a73b56c01455945d30b2e3d6ae49b" media="ZeeTV_HD-$RepresentationID$-$Number$.m4s?hdntl=exp=1749849157~acl=/bpk-tv/irdeto_com_Channel_258/output/*~id=7988236035~data=hdntl~hmac=142345bb7cfe4e0a035a0d53a4c1ff39ff4a73b56c01455945d30b2e3d6ae49b" startNumber="218727481">
+          <SegmentTimeline>
+            <S t="1049891904000" d="4800" r="1874"/>
+          </SegmentTimeline>
+        </SegmentTemplate>
+      </Representation>
+      <Representation id="video=3187600" bandwidth="3187600" width="1920" height="1080" codecs="avc1.4D4028" scanType="progressive">
+        <SegmentTemplate timescale="600" initialization="ZeeTV_HD-$RepresentationID$.dash?hdntl=exp=1749849157~acl=/bpk-tv/irdeto_com_Channel_258/output/*~id=7988236035~data=hdntl~hmac=142345bb7cfe4e0a035a0d53a4c1ff39ff4a73b56c01455945d30b2e3d6ae49b" media="ZeeTV_HD-$RepresentationID$-$Number$.m4s?hdntl=exp=1749849157~acl=/bpk-tv/irdeto_com_Channel_258/output/*~id=7988236035~data=hdntl~hmac=142345bb7cfe4e0a035a0d53a4c1ff39ff4a73b56c01455945d30b2e3d6ae49b" startNumber="218727481">
+          <SegmentTimeline>
+            <S t="1049891904000" d="4800" r="1874"/>
+          </SegmentTimeline>
+        </SegmentTemplate>
+      </Representation>
+      <ContentProtection value="cenc" schemeIdUri="urn:mpeg:dash:mp4protection:2011" cenc:default_KID="5403f573-7de2-5cd5-9416-744226b92354"/>
+      <ContentProtection schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95"><cenc:pssh>AAADQnBzc2gAAAAAmgTweZhAQoarkuZb4IhflQAAAyIiAwAAAQABABgDPABXAFIATQBIAEUAQQBEAEUAUgAgAHgAbQBsAG4AcwA9ACIAaAB0AHQAcAA6AC8ALwBzAGMAaABlAG0AYQBzAC4AbQBpAGMAcgBvAHMAbwBmAHQALgBjAG8AbQAvAEQAUgBNAC8AMgAwADAANwAvADAAMwAvAFAAbABhAHkAUgBlAGEAZAB5AEgAZQBhAGQAZQByACIAIAB2AGUAcgBzAGkAbwBuAD0AIgA0AC4AMAAuADAALgAwACIAPgA8AEQAQQBUAEEAPgA8AFAAUgBPAFQARQBDAFQASQBOAEYATwA+ADwASwBFAFkATABFAE4APgAxADYAPAAvAEsARQBZAEwARQBOAD4APABBAEwARwBJAEQAPgBBAEUAUwBDAFQAUgA8AC8AQQBMAEcASQBEAD4APAAvAFAAUgBPAFQARQBDAFQASQBOAEYATwA+ADwASwBJAEQAPgBjAC8AVQBEAFYATwBKADkAMQBWAHkAVQBGAG4AUgBDAEoAcgBrAGoAVgBBAD0APQA8AC8ASwBJAEQAPgA8AEMASABFAEMASwBTAFUATQA+AHoAWQByADEAdwA1AGMAcQBjADYAZwA9ADwALwBDAEgARQBDAEsAUwBVAE0APgA8AEwAQQBfAFUAUgBMAD4AaAB0AHQAcABzADoALwAvAHQAYQB0AGEAcABsAGEAeQAuAGwAaQB2AGUALgBvAHQAdAAuAGkAcgBkAGUAdABvAC4AYwBvAG0ALwBwAGwAYQB5AHIAZQBhAGQAeQAvAHIAaQBnAGgAdABzAG0AYQBuAGEAZwBlAHIALgBhAHMAbQB4AD8AQwByAG0ASQBkAD0AdABhAHQAYQBzAGsAeQAmAGEAbQBwADsAQQBjAGMAbwB1AG4AdABJAGQAPQB0AGEAdABhAHMAawB5ACYAYQBtAHAAOwBjAG8AbgB0AGUAbgB0AEkAZAA9ADQAMAAwADAAMAAwADAANgA1ADwALwBMAEEAXwBVAFIATAA+ADwALwBEAEEAVABBAD4APAAvAFcAUgBNAEgARQBBAEQARQBSAD4A</cenc:pssh></ContentProtection>
+      <ContentProtection schemeIdUri="urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed"><cenc:pssh>AAAAMnBzc2gAAAAA7e+LqXnWSs6jyCfc1R0h7QAAABISEFQD9XN94lzVlBZ0Qia5I1Q=</cenc:pssh></ContentProtection>
+    </AdaptationSet>
+  </Period>
+  <UTCTiming schemeIdUri="urn:mpeg:dash:utc:http-iso:2014" value="https://time.akamai.com/?iso"/>
+</MPD>
