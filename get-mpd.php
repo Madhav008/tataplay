@@ -157,6 +157,8 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
 header('Content-Type: application/dash+xml');
 header('Content-Disposition: attachment; filename="tp' . urlencode($id) . '.mpd"');
+
+
 // Load the MPD manifest as XML
 $dom = new DOMDocument();
 libxml_use_internal_errors(true); // Prevent output on malformed XML
@@ -170,9 +172,18 @@ if ($dom->loadXML($processedManifest)) {
 
         // Ensure trailing slash is removed for consistency
         $originalBaseUrl = rtrim($originalBaseUrl, '/');
-
+        $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";
+        $host = $_SERVER['HTTP_HOST'];
+        $port = $_SERVER['SERVER_PORT'];
+        $host_with_port = $host;
+        if (($protocol === 'http' && $port !== '80') || ($protocol === 'https' && $port !== '443')) {
+            $host_with_port = $_SERVER['SERVER_NAME'] . ':' . $port;
+        }
+        $request_uri = $_SERVER['REQUEST_URI'];
+        $path = dirname($request_uri);
+        $base_url = "{$protocol}://{$host_with_port}{$path}";
         // Construct proxy base URL
-        $proxyBaseUrl = "http://192.168.1.68/tataplay/{$id}/?baseurl={$originalBaseUrl}/";
+        $proxyBaseUrl = "{$base_url}/{$id}/?baseurl={$originalBaseUrl}/";
     } else {
         //error_log("[mpd] <BaseURL> element not found in MPD manifest.");
         $proxyBaseUrl = '';
