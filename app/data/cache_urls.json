@@ -4,12 +4,12 @@
         "updated_at": 1749827490
     },
     "40": {
-        "url": "https://bpaita4.akamaized.net/bpk-tv/irdeto_com_Channel_303/output/manifest.mpd?hdntl=exp=1749844641~acl=%2fbpk-tv%2firdeto_com_Channel_303%2foutput%2f*~id=7988236035~data=hdntl~hmac=843fc9313e682ce4b46afbf22b9b49bf3472c0d568b868c50b3d219157e112b7",
-        "updated_at": 1749830253
+        "url": "https://bpaita4.akamaized.net/bpk-tv/irdeto_com_Channel_303/output/manifest.mpd?hdntl=exp=1749932667~acl=%2fbpk-tv%2firdeto_com_Channel_303%2foutput%2f*~id=7988236035~data=hdntl~hmac=6f7c740dac22de92e49ee94c4f8eac266c41370ca5b326a29b5f393a39d0831a",
+        "updated_at": 1749918268
     },
     "267": {
-        "url": "https://bpaita6.akamaized.net/bpk-tv/irdeto_com_Channel_454/output/manifest.mpd?hdntl=exp=1749845343~acl=%2fbpk-tv%2firdeto_com_Channel_454%2foutput%2f*~id=7988236035~data=hdntl~hmac=df9ed44a1f6862e16544776858c1003fb1065ce71385df38c28e01e481c5a4bf",
-        "updated_at": 1749830955
+        "url": "https://bpaita6.akamaized.net/bpk-tv/irdeto_com_Channel_454/output/manifest.mpd?hdntl=exp=1749934300~acl=%2fbpk-tv%2firdeto_com_Channel_454%2foutput%2f*~id=7988236035~data=hdntl~hmac=648eab3e17a62a52eaef222ecdfdce43de8d348b0ef7ac57d563ce8cd6e34018",
+        "updated_at": 1749919900
     },
     "677": {
         "url": "https://bpaita4.akamaized.net/bpk-tv/irdeto_com_Channel_902/output/manifest.mpd?hdntl=exp=1749849138~acl=%2fbpk-tv%2firdeto_com_Channel_902%2foutput%2f*~id=7988236035~data=hdntl~hmac=7bc00e8d1f5beb9970a8bdd368b986ea34f2c3d381745346005f957a545aed6f",
@@ -22,5 +22,17 @@
     "63": {
         "url": "https://bpaita2.akamaized.net/bpk-tv/irdeto_com_Channel_258/output/manifest.mpd?hdntl=exp=1749849157~acl=%2fbpk-tv%2firdeto_com_Channel_258%2foutput%2f*~id=7988236035~data=hdntl~hmac=142345bb7cfe4e0a035a0d53a4c1ff39ff4a73b56c01455945d30b2e3d6ae49b",
         "updated_at": 1749834768
+    },
+    "578": {
+        "url": "https://bpaita2.akamaized.net/bpk-tv/irdeto_com_Channel_196/output/manifest.mpd?hdntl=exp=1749932254~acl=%2fbpk-tv%2firdeto_com_Channel_196%2foutput%2f*~id=7988236035~data=hdntl~hmac=f2b33388f89db567a8d353df73d1e9305a2466aa9ba262f69787ee59ad986308",
+        "updated_at": 1749917855
+    },
+    "783": {
+        "url": "https://bpaita6.akamaized.net/bpk-tv/irdeto_com_Channel_974/output/manifest.mpd?hdntl=exp=1749852716~acl=%2fbpk-tv%2firdeto_com_Channel_974%2foutput%2f*~id=7988236035~data=hdntl~hmac=3227ba9c107eacf3c267a978588a22447f0203d54acea80ee2e9790201c48130",
+        "updated_at": 1749838328
+    },
+    "8": {
+        "url": "https://bpaita7.akamaized.net/bpk-tv/irdeto_com_Channel_257/output/manifest.mpd?hdntl=exp=1749852725~acl=%2fbpk-tv%2firdeto_com_Channel_257%2foutput%2f*~id=7988236035~data=hdntl~hmac=6917b69e2fd8a3531bfc7c08d85327b55dc530daacd1f40be1d76c39a437c20d",
+        "updated_at": 1749838337
     }
 }
