@@ -64,8 +64,16 @@ $protocol = filter_var($_SERVER['HTTP_HOST'], FILTER_VALIDATE_IP) ? "http" : "ht
 $host = $_SERVER['HTTP_HOST'];
 $port = $_SERVER['SERVER_PORT'];
 $host_with_port = $host;
-if (($protocol === 'http' && $port !== '80') || ($protocol === 'https' && $port !== '443')) {
-    $host_with_port = $_SERVER['SERVER_NAME'] . ':' . $port;
+if (filter_var($_SERVER['SERVER_NAME'], FILTER_VALIDATE_IP)) {
+    // It's an IP, include port if not default
+    if (($protocol === 'http' && $port !== '80') || ($protocol === 'https' && $port !== '443')) {
+        $host_with_port = $_SERVER['SERVER_NAME'] . ':' . $port;
+    } else {
+        $host_with_port = $_SERVER['SERVER_NAME'];
+    }
+} else {
+    // It's a domain, never include port
+    $host_with_port = $_SERVER['SERVER_NAME'];
 }
 $request_uri = $_SERVER['REQUEST_URI'];
 $path = dirname($request_uri);
