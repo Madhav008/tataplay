@@ -1,0 +1,18 @@
+{
+    "7NfFUorkVpu6ad-F_GyEyQ": {
+        "license": {
+            "keys": [
+                {
+                    "kty": "oct",
+                    "k": "iti1vbRSqayHJjAi-ZSVww",
+                    "kid": "7NfFUorkVpu6ad-F_GyEyQ"
+                }
+            ],
+            "type": "temporary"
+        },
+        "headers": [
+            "content-type: application/json",
+            "content-encoding: gzip"
+        ]
+    }
+}

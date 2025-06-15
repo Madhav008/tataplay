@@ -60,7 +60,7 @@ if (stripos($userAgent, 'tivimate') !== false) {
     $liveheaders = '|X-Forwarded-For=59.178.74.184&Origin=https://watch.tataplay.com&Referer=https://watch.tataplay.com/';
 }
 
-$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";
+$protocol = filter_var($_SERVER['HTTP_HOST'], FILTER_VALIDATE_IP) ? "http" : "https";
 $host = $_SERVER['HTTP_HOST'];
 $port = $_SERVER['SERVER_PORT'];
 $host_with_port = $host;
@@ -90,7 +90,9 @@ foreach ($channels as $channel) {
         $channel_genre .= ", HD";
     }
 
-    $license_url = "https://tp.drmlive-01.workers.dev?id={$channel_id}";
+    // $license_url = "https://tp.drmlive-01.workers.dev?id={$channel_id}";
+    $license_url = "{$base_url}/license/{$channel_id}";
+
     $channel_live = "{$base_url}/{$stream_path}?id={$channel_id}{$liveheaders}";
 
     echo "#EXTINF:-1 tvg-id=\"ts{$channel_id}\" tvg-logo=\"{$channel_logo}\" group-title=\"{$channel_genre}\",{$channel_name}\n";

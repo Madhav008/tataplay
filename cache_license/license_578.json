@@ -1,0 +1,18 @@
+{
+    "AJq2pJILUDy85jxZCGgpzA": {
+        "license": {
+            "keys": [
+                {
+                    "kty": "oct",
+                    "k": "-jykgK9ube-EaX0jhqUQOA",
+                    "kid": "AJq2pJILUDy85jxZCGgpzA"
+                }
+            ],
+            "type": "temporary"
+        },
+        "headers": [
+            "content-type: application/json",
+            "content-encoding: gzip"
+        ]
+    }
+}
