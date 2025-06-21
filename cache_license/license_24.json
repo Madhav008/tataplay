@@ -1,0 +1,17 @@
+{
+    "StxUN8-YXQWQvUELJMfBYQ": {
+        "license": {
+            "keys": [
+                {
+                    "kty": "oct",
+                    "k": "mRCAVQsLDooy-BowtkhEyA",
+                    "kid": "StxUN8-YXQWQvUELJMfBYQ"
+                }
+            ],
+            "type": "temporary"
+        },
+        "headers": [
+            "content-type: application/json"
+        ]
+    }
+}

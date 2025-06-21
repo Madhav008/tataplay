@@ -33,8 +33,25 @@ def send_kid_to_license_server(kid):
 
     print(f"Status Code: {response.status_code}")
     try:
-        print("Response JSON:")
-        print(response.json())
+        res_data = response.json()
+        keys = res_data.get("keys")[0]
+        kid = keys.get("kid")
+        key = keys.get("k")
+        
+        print(f"Base64 KID: {kid}")
+        print(f"Base64 KEY: {key}")
+
+        # Decode base64 to bytes
+        decoded_kid = base64.urlsafe_b64decode(kid + "===")  # ensures proper padding
+        decoded_key = base64.urlsafe_b64decode(key + "===")
+
+        # Convert to hex
+        hex_kid = decoded_kid.hex()
+        hex_key = decoded_key.hex()
+
+        print(f"Decoded KID (hex): {hex_kid}")
+        print(f"Decoded Key (hex): {hex_key}")
+        return hex_kid, hex_key
     except Exception as e:
         print("Non-JSON Response:")
         print(response.text)
@@ -67,7 +84,7 @@ def extract_default_kid(mpd_xml):
     return None
 
 # Example usage
-if __name__ == "__main__":
+def getKey():
     mpd_url = "https://tataplay.ipl2025.space/tataplay/manifest.mpd?id=40"
 
     print(f"Fetching MPD from: {mpd_url}")
@@ -79,7 +96,7 @@ if __name__ == "__main__":
         if kid:
             print(f"[+] Extracted default_KID: {kid}")
             b64url_kid = hex_kid_to_base64url(kid)
-            send_kid_to_license_server(b64url_kid)
+            return send_kid_to_license_server(b64url_kid)
         else:
             print("[-] No default_KID found in mp4protection ContentProtection.")
     except Exception as e:

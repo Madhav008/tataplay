@@ -19,7 +19,6 @@ $parsedUrl = parse_url($_SERVER['REQUEST_URI']);
 
 preg_match('~^/tataplay/(\d+)~', $parsedUrl['path'], $matches);
 $media_id = $matches[1] ?? null;
-// error_log("[segment] media_id: $media_id");
 
 $cacheData = file_exists($cachePath) ? json_decode(file_get_contents($cachePath), true) : [];
 
@@ -29,18 +28,9 @@ $host = '';
 if (isset($cacheData[$media_id])) {
     $cachedUrl = $cacheData[$media_id]['url'];
     $baseUrl = rtrim(preg_replace('/manifest\.mpd.*/', 'dash', $cachedUrl), '/');
-    // $baseUrl = str_replace('//', '/', $baseUrl);
-    // error_log("[segment] Base URL: $baseUrl");
-    $baseUrl = rtrim(preg_replace('/manifest\.mpd.*/', 'dash', $cachedUrl), '/');
-
-    // ❌ DO NOT do str_replace('//', '/', $baseUrl);
-
     error_log("[segment] Base URL: $baseUrl");
-
-    // Correctly extract host
     $host = parse_url($baseUrl, PHP_URL_HOST);
     error_log("[segment] Host: $host");
-
 } else {
     error_log("[segment] No cached URL found for media ID: $media_id");
     http_response_code(404);
@@ -50,7 +40,6 @@ if (isset($cacheData[$media_id])) {
 
 $segmentPath = basename($parsedUrl['path']);
 $query = $parsedUrl['query'] ?? '';
-// error_log("[segment] Segment path: $segmentPath, Query: $query");
 
 // Extract hdntl token & real channel ID from `acl`
 parse_str($query, $queryParts);
@@ -100,6 +89,22 @@ if ($response === false || $httpCode !== 200) {
     echo "Failed to fetch segment. Code: $httpCode";
     exit;
 }
+
+// Store segment in channel folder
+// $channelDir = __DIR__ . "/segments/{$channelId}";
+// if (!is_dir($channelDir)) {
+//     mkdir($channelDir, 0777, true);
+// }
+
+// // Save init segment as 'init.mp4', others as their segment name
+// if (stripos($segmentPath, 'init') !== false) {
+//     $segmentFile = $channelDir . '/init.mp4';
+// } else {
+//     $segmentFile = $channelDir . '/' . $segmentPath;
+// }
+// file_put_contents($segmentFile, $response);
+
+// error_log("[segment] Saved segment to $segmentFile");
 
 // Serve segment with appropriate headers
 header("Content-Type: video/mp4");
