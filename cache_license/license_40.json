@@ -1,18 +1,32 @@
 {
-    "7NfFUorkVpu6ad-F_GyEyQ": {
+    "JcOvINiUVgS0id2vGT2X0Q": {
         "license": {
             "keys": [
                 {
                     "kty": "oct",
-                    "k": "iti1vbRSqayHJjAi-ZSVww",
-                    "kid": "7NfFUorkVpu6ad-F_GyEyQ"
+                    "k": "vKIxNsFBl9LvFIOrHZjJ5w",
+                    "kid": "JcOvINiUVgS0id2vGT2X0Q"
                 }
             ],
             "type": "temporary"
         },
         "headers": [
-            "content-type: application/json",
-            "content-encoding: gzip"
+            "content-type: application/json"
+        ]
+    },
+    "mtK0Q8trVK2CDn-xoP6iEQ": {
+        "license": {
+            "keys": [
+                {
+                    "kty": "oct",
+                    "k": "Xug5q0-VxxO1yXXwdMfo_Q",
+                    "kid": "mtK0Q8trVK2CDn-xoP6iEQ"
+                }
+            ],
+            "type": "temporary"
+        },
+        "headers": [
+            "content-type: application/json"
         ]
     }
 }

@@ -95,9 +95,16 @@ $allowed_headers = [
     'User-Agent',
     'X-Forwarded-For'
 ];
-foreach (getallheaders() as $key => $value) {
-    if (in_array($key, $allowed_headers)) {
-        $forward_headers[] = "$key: $value";
+
+$client_headers = getallheaders();
+foreach ($allowed_headers as $header) {
+    foreach ($client_headers as $key => $value) {
+        if (strcasecmp($key, $header) === 0) {
+            // Skip Accept-Encoding, we'll set it manually below
+            if (strcasecmp($key, 'Accept-Encoding') !== 0) {
+                $forward_headers[] = "$header: $value";
+            }
+        }
     }
 }
 error_log("[license] Forwarding headers: " . json_encode($forward_headers));
